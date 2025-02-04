@@ -10,7 +10,6 @@ public class ScheduleResponseDto {
     private Long id;
     private String writer;
     private String contents;
-    private String password;
     private LocalDateTime date;
     private LocalDateTime modifydate;
 
@@ -19,7 +18,6 @@ public class ScheduleResponseDto {
         this.id = schedule.getId();
         this.writer = schedule.getWriter();
         this.contents = schedule.getContents();
-        this.password = schedule.getPassword();
         this.date = schedule.getDate();
         this.modifydate = schedule.getModifydate();
     }

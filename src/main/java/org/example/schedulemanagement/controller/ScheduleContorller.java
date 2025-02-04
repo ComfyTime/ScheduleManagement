@@ -6,6 +6,7 @@ import org.example.schedulemanagement.dto.ScheduleResponseDto;
 import org.example.schedulemanagement.entity.Schedule;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -31,7 +32,7 @@ public class ScheduleContorller {
     }
 
     @GetMapping("/{date}")
-    public ScheduleResponseDto findScheduleByDate(@PathVariable Long date) {
+    public ScheduleResponseDto findScheduleByDate(@PathVariable LocalDateTime date) {
 
         Schedule schedule = scheduleList.get(date);
 
@@ -56,5 +57,11 @@ public class ScheduleContorller {
             @PathVariable Long date
     ) {
         scheduleList.remove(date);
+    }
+    @DeleteMapping("/{modifydate}")
+    public void deleteSchedule(
+            @PathVariable LocalDateTime modifydate
+    ) {
+        scheduleList.remove(modifydate);
     }
 }
