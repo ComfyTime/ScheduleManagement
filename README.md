@@ -2,10 +2,10 @@
 ## API 명세
 |구분|Method|API|
 |---|---|---|
-|일정 생성|POST|"/schedules"|
-|일정 조회|GET|"/{date}"|
-|일정 수정|PUT|"/{date}"|
-|일정 삭제|DELETE|"/{modifydate}"|
+|일정 생성|POST|/schedules|
+|일정 조회|GET|/schedules/{date}|
+|일정 수정|PUT|/schedules/{date}|
+|일정 삭제|DELETE|/schedules/{modifydate}|
 
 ## ERD
 
